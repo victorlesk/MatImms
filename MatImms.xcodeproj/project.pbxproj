@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D301532C0855700CBBE5A80 /* Pods_MatImms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474C940C954CC0CE8AC874E9 /* Pods_MatImms.framework */; };
 		3814BA5F1F72BFC100638DC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3814BA5E1F72BFC100638DC1 /* AppDelegate.swift */; };
 		3814BA611F72BFC100638DC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3814BA601F72BFC100638DC1 /* ViewController.swift */; };
 		3814BA641F72BFC100638DC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3814BA621F72BFC100638DC1 /* Main.storyboard */; };
 		3814BA661F72BFC100638DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3814BA651F72BFC100638DC1 /* Assets.xcassets */; };
 		3814BA691F72BFC100638DC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3814BA671F72BFC100638DC1 /* LaunchScreen.storyboard */; };
+		3814BA741F72C0B500638DC1 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3814BA731F72C0B500638DC1 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3814BA7E1F72C1E700638DC1 /* XMLFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3814BA7D1F72C1E700638DC1 /* XMLFuncs.swift */; };
+		38321E181F72C722006D108B /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 38321E171F72C722006D108B /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,14 @@
 		3814BA651F72BFC100638DC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3814BA681F72BFC100638DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3814BA6A1F72BFC100638DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3814BA711F72C0A900638DC1 /* GDataXMLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		3814BA721F72C0B400638DC1 /* MatImms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MatImms-Bridging-Header.h"; sourceTree = "<group>"; };
+		3814BA731F72C0B500638DC1 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		3814BA7D1F72C1E700638DC1 /* XMLFuncs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLFuncs.swift; sourceTree = "<group>"; };
+		38321E171F72C722006D108B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		474C940C954CC0CE8AC874E9 /* Pods_MatImms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatImms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE95CFDFDF1F933EB46CE211 /* Pods-MatImms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatImms.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatImms/Pods-MatImms.release.xcconfig"; sourceTree = "<group>"; };
+		DC51113F7B6DF268D1093EDA /* Pods-MatImms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatImms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatImms/Pods-MatImms.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38321E181F72C722006D108B /* libxml2.tbd in Frameworks */,
+				1D301532C0855700CBBE5A80 /* Pods_MatImms.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,8 @@
 			children = (
 				3814BA5D1F72BFC100638DC1 /* MatImms */,
 				3814BA5C1F72BFC100638DC1 /* Products */,
+				C66AAA48AC2ECC820565F914 /* Pods */,
+				539DF8F39211984626BBEB7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +76,38 @@
 				3814BA651F72BFC100638DC1 /* Assets.xcassets */,
 				3814BA671F72BFC100638DC1 /* LaunchScreen.storyboard */,
 				3814BA6A1F72BFC100638DC1 /* Info.plist */,
+				3814BA701F72C08C00638DC1 /* GDataXML */,
 			);
 			path = MatImms;
+			sourceTree = "<group>";
+		};
+		3814BA701F72C08C00638DC1 /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				3814BA711F72C0A900638DC1 /* GDataXMLNode.h */,
+				3814BA731F72C0B500638DC1 /* GDataXMLNode.m */,
+				3814BA721F72C0B400638DC1 /* MatImms-Bridging-Header.h */,
+				3814BA7D1F72C1E700638DC1 /* XMLFuncs.swift */,
+			);
+			name = GDataXML;
+			sourceTree = "<group>";
+		};
+		539DF8F39211984626BBEB7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38321E171F72C722006D108B /* libxml2.tbd */,
+				474C940C954CC0CE8AC874E9 /* Pods_MatImms.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C66AAA48AC2ECC820565F914 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC51113F7B6DF268D1093EDA /* Pods-MatImms.debug.xcconfig */,
+				BE95CFDFDF1F933EB46CE211 /* Pods-MatImms.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3814BA6D1F72BFC100638DC1 /* Build configuration list for PBXNativeTarget "MatImms" */;
 			buildPhases = (
+				E6988A65A56806E85A5C9DA7 /* [CP] Check Pods Manifest.lock */,
 				3814BA571F72BFC100638DC1 /* Sources */,
 				3814BA581F72BFC100638DC1 /* Frameworks */,
 				3814BA591F72BFC100638DC1 /* Resources */,
+				7FCFEB2C4D4E391C23B1FAA0 /* [CP] Embed Pods Frameworks */,
+				BD9C070DB0BD902C73BA0647 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -91,12 +140,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Digital Stitch";
 				TargetAttributes = {
 					3814BA5A1F72BFC100638DC1 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2GFDWBEHWC;
+						DevelopmentTeam = 2WSGKRMNNT;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,13 +182,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7FCFEB2C4D4E391C23B1FAA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatImms/Pods-MatImms-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD9C070DB0BD902C73BA0647 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatImms/Pods-MatImms-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6988A65A56806E85A5C9DA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3814BA571F72BFC100638DC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3814BA611F72BFC100638DC1 /* ViewController.swift in Sources */,
+				3814BA7E1F72C1E700638DC1 /* XMLFuncs.swift in Sources */,
 				3814BA5F1F72BFC100638DC1 /* AppDelegate.swift in Sources */,
+				3814BA741F72C0B500638DC1 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +274,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -182,7 +284,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -225,7 +331,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -233,7 +341,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -261,27 +373,38 @@
 		};
 		3814BA6E1F72BFC100638DC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC51113F7B6DF268D1093EDA /* Pods-MatImms.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2GFDWBEHWC;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2WSGKRMNNT;
 				INFOPLIST_FILE = MatImms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.ac.imperial.health.MatImms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MatImms/MatImms-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 			};
 			name = Debug;
 		};
 		3814BA6F1F72BFC100638DC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE95CFDFDF1F933EB46CE211 /* Pods-MatImms.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2GFDWBEHWC;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2WSGKRMNNT;
 				INFOPLIST_FILE = MatImms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.ac.imperial.health.MatImms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MatImms/MatImms-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 			};
 			name = Release;
 		};
@@ -304,6 +427,7 @@
 				3814BA6F1F72BFC100638DC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
